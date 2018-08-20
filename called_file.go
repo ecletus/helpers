@@ -19,10 +19,6 @@ func GetCalledFileNameSkip(skip int, abs... bool) string {
 	return filename
 }
 
-func GetCalledFileName(abs... bool) string {
-	return GetCalledFileNameSkip(2, abs...)
-}
-
 func GetCalledDir(abs ...bool) string {
 	file := GetCalledFileNameSkip(2, abs...)
 	return filepath.Dir(file)

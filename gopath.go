@@ -2,7 +2,6 @@ package helpers
 
 import (
 	"os"
-	"path"
 	"strings"
 	"go/build"
 	"github.com/mitchellh/go-homedir"
@@ -45,32 +44,4 @@ func init() {
 	}
 
 	GOPATH = GOPATHS[0]
-}
-
-func ResolveGoPath(pth string) (gopath string) {
-	for _, gopath := range GOPATHS {
-		gpth := path.Join(gopath, pth)
-		if _, err := os.Stat(gpth); err == nil {
-			return gopath
-		}
-	}
-	return ""
-}
-
-func ResolveGoSrcPath(pth string) string {
-	pth = path.Join("src", pth)
-	for _, gopath := range GOPATHS {
-		gpth := path.Join(gopath, pth)
-		if _, err := os.Stat(gpth); err == nil {
-			return gpth
-		}
-	}
-	return ""
-}
-
-func IsExistingDir(pth string) bool {
-	if fi, err := os.Stat(pth); err == nil {
-		return fi.Mode().IsDir()
-	}
-	return false
 }
