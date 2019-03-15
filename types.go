@@ -23,6 +23,9 @@ func IsNil(value reflect.Value) bool {
 }
 
 func IsNilInterface(value interface{}) bool {
+	if value == nil {
+		return true
+	}
 	return IsNil(reflect.ValueOf(value))
 }
 
