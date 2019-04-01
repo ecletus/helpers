@@ -1,6 +1,6 @@
 package helpers
 
-import "github.com/moisespsena/go-error-wrap"
+import "github.com/moisespsena-go/error-wrap"
 
 func CheckReturnError(funcs ...func() (key string, err error)) (name string, index int, err error) {
 	for i, f := range funcs {

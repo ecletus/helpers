@@ -1,7 +1,7 @@
 package helpers
 
 import (
-	"github.com/moisespsena/go-error-wrap"
+	"github.com/moisespsena-go/error-wrap"
 	"gopkg.in/yaml.v2"
 )
 
