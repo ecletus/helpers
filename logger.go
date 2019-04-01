@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/moisespsena-go/aorm"
-	"github.com/moisespsena/go-path-helpers"
+	"github.com/moisespsena-go/path-helpers"
 	"github.com/vjeantet/jodaTime"
 )
 
