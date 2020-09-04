@@ -72,7 +72,7 @@ func SimpleFileScopeQueryLogger(dir string, err func(err error, args ...interfac
 				msg += "#" + f.Field.String() + ""
 			}
 		}
-		msg += ": " + scope.QueryString()
+		msg += ": " + scope.Query.Query
 		logger.Log(msg)
 	}
 }
